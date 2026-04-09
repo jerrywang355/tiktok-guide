@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok 海外账号运营准备手册（2026 更新版）</title>
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --accent: #e94560;
+            --accent-light: #ff6b81;
+            --bg: #f8f9fa;
+            --card: #ffffff;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --border: #e0e0e0;
+            --success: #00b894;
+            --warning: #fdcb6e;
+            --danger: #d63031;
+            --info: #0984e3;
+            --update-bg: #fff3e0;
+            --update-border: #ff9800;
+            --shadow: 0 2px 12px rgba(0,0,0,0.08);
+            --shadow-hover: 0 4px 20px rgba(0,0,0,0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            padding: 60px 20px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(233,69,96,0.1) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            font-weight: 800;
+            margin-bottom: 12px;
+            position: relative;
+            letter-spacing: 1px;
+        }
+
+        .header .subtitle {
+            font-size: 1.05em;
+            opacity: 0.85;
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .header .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-top: 16px;
+            position: relative;
+            font-weight: 600;
+        }
+
+        /* Container */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+        }
+
+        /* TOC */
+        .toc {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 28px 32px;
+            margin-bottom: 36px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--accent);
+        }
+
+        .toc h2 {
+            font-size: 1.2em;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+
+        .toc ol {
+            padding-left: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: var(--info);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        /* Section */
+        .section {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 28px;
+            box-shadow: var(--shadow);
+            transition: box-shadow 0.3s;
+        }
+
+        .section:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .section h2 {
+            font-size: 1.5em;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h2 .num {
+            background: var(--accent);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85em;
+            flex-shrink: 0;
+        }
+
+        .section h3 {
+            font-size: 1.15em;
+            color: var(--primary);
+            margin: 24px 0 12px;
+            padding-left: 12px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .section h4 {
+            font-size: 1.05em;
+            color: var(--text);
+            margin: 18px 0 10px;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        .section ul, .section ol {
+            padding-left: 24px;
+            margin-bottom: 14px;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+        }
+
+        /* Update badge */
+        .update-badge {
+            display: inline-block;
+            background: var(--update-bg);
+            border: 1px solid var(--update-border);
+            color: #e65100;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.78em;
+            font-weight: 700;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+
+        /* Update block */
+        .update-block {
+            background: var(--update-bg);
+            border-left: 4px solid var(--update-border);
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-size: 0.95em;
+        }
+
+        .update-block .update-title {
+            font-weight: 700;
+            color: #e65100;
+            margin-bottom: 6px;
+            font-size: 0.9em;
+        }
+
+        /* Info box */
+        .info-box {
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-size: 0.95em;
+        }
+
+        .info-box.warning {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+        }
+
+        .info-box.danger {
+            background: #ffebee;
+            border-left: 4px solid var(--danger);
+        }
+
+        .info-box.success {
+            background: #e8f5e9;
+            border-left: 4px solid var(--success);
+        }
+
+        .info-box.tip {
+            background: #e3f2fd;
+            border-left: 4px solid var(--info);
+        }
+
+        .info-box strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* Steps */
+        .step-list {
+            counter-reset: step;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .step-list li {
+            counter-increment: step;
+            padding: 12px 16px 12px 52px;
+            position: relative;
+            background: #fafafa;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #eee;
+        }
+
+        .step-list li::before {
+            content: counter(step);
+            position: absolute;
+            left: 14px;
+            top: 12px;
+            width: 28px;
+            height: 28px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85em;
+            font-weight: 700;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.95em;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        tr:hover {
+            background: #eef2ff;
+        }
+
+        /* Code */
+        code {
+            background: #f1f2f6;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: var(--accent);
+            font-family: "SF Mono", "Fira Code", monospace;
+        }
+
+        /* Checklist */
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            padding: 6px 0 6px 28px;
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        .checklist li.cross::before {
+            content: '✗';
+            color: var(--danger);
+        }
+
+        /* Flow chart style */
+        .flow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            margin: 16px 0;
+        }
+
+        .flow-step {
+            background: linear-gradient(135deg, var(--primary), #0f3460);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.88em;
+            font-weight: 500;
+        }
+
+        .flow-arrow {
+            color: var(--accent);
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+
+        /* Tag */
+        .tag {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin: 2px 4px 2px 0;
+        }
+
+        .tag.green { background: #e8f5e9; color: #2e7d32; }
+        .tag.red { background: #ffebee; color: #c62828; }
+        .tag.blue { background: #e3f2fd; color: #1565c0; }
+        .tag.orange { background: #fff3e0; color: #e65100; }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-light);
+            font-size: 0.88em;
+            border-top: 1px solid var(--border);
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.6em; }
+            .section { padding: 20px 16px; }
+            .toc { padding: 20px; }
+            .flow { flex-direction: column; align-items: flex-start; }
+            .flow-arrow { transform: rotate(90deg); }
+            table { font-size: 0.85em; }
+            th, td { padding: 8px 10px; }
+        }
+
+        /* Scroll behavior */
+        html { scroll-behavior: smooth; }
+
+        /* Back to top */
+        .back-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 44px;
+            height: 44px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.3em;
+            box-shadow: 0 2px 10px rgba(233,69,96,0.4);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            transition: transform 0.2s;
+        }
+
+        .back-top:hover { transform: scale(1.1); }
+
+        /* Print */
+        @media print {
+            .header { padding: 30px 20px; }
+            .section { box-shadow: none; border: 1px solid #ddd; }
+            .back-top { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>TikTok 海外账号运营准备手册</h1>
+    <p class="subtitle">从环境搭建、手机刷机、软件配置到账号注册与养号的完整实操指南</p>
+    <span class="badge">2026 年 4 月更新版</span>
+</div>
+
+<div class="container">
+
+    <!-- TOC -->
+    <div class="toc">
+        <h2>目录</h2>
+        <ol>
+            <li><a href="#s1">硬件准备</a></li>
+            <li><a href="#s2">软件准备</a></li>
+            <li><a href="#s3">手机刷机（重新设置）</a></li>
+            <li><a href="#s4">软件与网络设置</a></li>
+            <li><a href="#s5">环境检测</a></li>
+            <li><a href="#s6">TikTok 注册</a></li>
+            <li><a href="#s7">养号阶段</a></li>
+            <li><a href="#s8">2026 风控新趋势与应对</a></li>
+            <li><a href="#s9">账号解封申诉</a></li>
+            <li><a href="#s10">每月维护检查清单</a></li>
+        </ol>
+    </div>
+
+    <!-- Section 1: Hardware -->
+    <div class="section" id="s1">
+        <h2><span class="num">1</span> 硬件准备</h2>
+
+        <h3>手机选择</h3>
+        <table>
+            <tr>
+                <th>项目</th>
+                <th>推荐方案</th>
+                <th>备注</th>
+            </tr>
+            <tr>
+                <td>机型</td>
+                <td><strong>iPhone 12 及以上</strong></td>
+                <td>国行全网通或美版均可；二手即可，预算约 $200–$500</td>
+            </tr>
+            <tr>
+                <td>系统</td>
+                <td>iOS 16 – iOS 17 稳定版</td>
+                <td>初始可更新到稳定版本，后期不必追新版，避免兼容问题</td>
+            </tr>
+            <tr>
+                <td>SIM 卡</td>
+                <td>不插卡 或 插目标国当地实体卡</td>
+                <td>淘宝可购买美国实体号码；<strong>绝对不插国内卡</strong></td>
+            </tr>
+        </table>
+
+        <div class="update-block">
+            <div class="update-title">2026 更新说明</div>
+            <p>原推荐 iPhone 8 以上，但 iPhone 8/X/11 系列在 2026 年已逐步被 iOS 新版本淘汰，且性能不足以流畅运行最新版 TikTok。建议至少使用 <strong>iPhone 12</strong>，性能和系统支持更有保障。华为手机因芯片/系统特征容易被平台识别，<strong>绝对不要使用</strong>。</p>
+        </div>
+
+        <h3>网络环境</h3>
+        <ul>
+            <li><strong>Wi-Fi</strong>：家用宽带即可，网速越快越好，不需要全局翻墙的路由器</li>
+            <li><strong>蜂窝数据</strong>：必须关闭，避免误连中国 IP</li>
+            <li>Wi-Fi Calling 无需开启</li>
+        </ul>
+    </div>
+
+    <!-- Section 2: Software -->
+    <div class="section" id="s2">
+        <h2><span class="num">2</span> 软件准备</h2>
+
+        <table>
+            <tr>
+                <th>软件/服务</th>
+                <th>用途</th>
+                <th>说明</th>
+            </tr>
+            <tr>
+                <td>美国 Apple ID</td>
+                <td>下载 TikTok 及海外 App</td>
+                <td>可购买成品 ID（含 Shadowrocket）或自行注册</td>
+            </tr>
+            <tr>
+                <td>Shadowrocket（小火箭）</td>
+                <td>VPN 代理工具</td>
+                <td>iOS 端主流工具，需通过美区 App Store 下载</td>
+            </tr>
+            <tr>
+                <td>VPN 节点</td>
+                <td>伪装海外 IP</td>
+                <td>使用与目标运营地区一致的 IP 节点；<strong>建议购买独享固定住宅 IP</strong></td>
+            </tr>
+            <tr>
+                <td>Google 邮箱 ×2</td>
+                <td>注册 TikTok</td>
+                <td>一个搬运找素材用（可登电脑端），另一个正式运营用（<strong>禁止电脑端登录</strong>，只用专用节点）</td>
+            </tr>
+            <tr>
+                <td>微信国际版 WeChat</td>
+                <td>发文字沟通</td>
+                <td>可选安装</td>
+            </tr>
+            <tr>
+                <td>CapCut 国际版</td>
+                <td>视频剪辑去水印</td>
+                <td>TikTok 官方剪辑工具，可一定程度避免版权问题</td>
+            </tr>
+        </table>
+
+        <div class="update-block">
+            <div class="update-title">2026 更新说明</div>
+            <p><strong>IP 类型很重要</strong>：住宅 IP（Residential IP）远优于机房/数据中心 IP。数据中心 IP 极易被 TikTok 识别为非真人用户。建议购买独享静态住宅 IP，虽然价格更高，但账号安全性大幅提升。</p>
+        </div>
+    </div>
+
+    <!-- Section 3: Flash -->
+    <div class="section" id="s3">
+        <h2><span class="num">3</span> 手机刷机（重新设置）</h2>
+
+        <div class="info-box danger">
+            <strong>重要提醒</strong>
+            起新号或老号被封，<strong>必须重新刷机</strong>，彻底清除设备指纹和历史数据，避免关联风控。TikTok 会检测设备序列号和历史登录记录，同一台手机的封号记录会影响后续新号。
+        </div>
+
+        <h3>刷机前检查</h3>
+        <ul class="checklist">
+            <li><strong>不插卡</strong>或插目标国当地 SIM 卡（绝对不插国内卡）</li>
+            <li>确保 Wi-Fi 可用</li>
+            <li>备份需要的数据（刷机后全部清除）</li>
+        </ul>
+
+        <h3>完整刷机步骤</h3>
+        <ol class="step-list">
+            <li><strong>恢复出厂设置</strong>：设置 → 通用 → 传输或还原 iPhone → 抹掉所有内容和设置</li>
+            <li><strong>设置新 iPhone</strong>：所有弹框能选"稍后"就选稍后，不确定的先选"否"</li>
+            <li><strong>关闭定位服务</strong>：设置 → 隐私与安全性 → 定位服务 → 关闭</li>
+            <li><strong>关闭广告跟踪</strong>：设置 → 隐私与安全性 → 跟踪 → 关闭"允许 App 请求跟踪"</li>
+            <li><strong>设置时区</strong>：设置 → 通用 → 日期与时间 → 关闭"自动设置" → 手动设为 VPN IP 对应时区（如美东选 New York）</li>
+            <li><strong>键盘设置</strong>：设置 → 通用 → 键盘 → 只保留 Emoji 和运营地区语言（如英语），删除其他所有键盘</li>
+            <li><strong>语言和地区</strong>：设置 → 通用 → 语言与地区 → 设为运营地区（如美国）和对应语言（如英语）</li>
+            <li><strong>关闭蜂窝数据</strong>：设置 → 蜂窝网络 → 关闭蜂窝数据，防止误连中国 IP</li>
+        </ol>
+
+        <div class="update-block">
+            <div class="update-title">2026 新增步骤</div>
+            <ul>
+                <li><strong>关闭 IPv6</strong>：设置 → Wi-Fi → 点击已连接网络的 (i) → 配置 IP → 手动 → 确保无 IPv6 地址泄漏</li>
+                <li><strong>清理残留应用</strong>：刷机后不要安装任何国内 App（微信、支付宝、淘宝等），残留的国内 App 缓存信息会被 TikTok 检测到</li>
+                <li><strong>关闭 Siri 与搜索建议</strong>：设置 → Siri 与搜索 → 关闭相关建议，减少设备指纹暴露</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 4: Software Setup -->
+    <div class="section" id="s4">
+        <h2><span class="num">4</span> 软件与网络设置</h2>
+
+        <h3>Shadowrocket（小火箭）配置</h3>
+        <ol>
+            <li>登录美区 Apple ID，从 App Store 下载 Shadowrocket</li>
+            <li>添加购买的节点：扫码或手动添加服务器链接</li>
+            <li>设置为<strong>全局代理模式（Proxy）</strong></li>
+        </ol>
+
+        <div class="update-block">
+            <div class="update-title">2026 新增：DNS 泄漏防护（重要）</div>
+            <p>DNS 泄漏是 2025-2026 年导致账号被风控的常见原因之一。即使 IP 显示为美国，如果 DNS 请求走了国内服务器，TikTok 仍然能判断你的真实位置。</p>
+            <ul>
+                <li>Shadowrocket → 设置 → 开启 <code>防止 DNS 泄漏</code></li>
+                <li>Shadowrocket → 设置 → DNS → 使用远程 DNS 解析（如 <code>8.8.8.8</code>、<code>1.1.1.1</code>）</li>
+                <li>建议开启 <code>严格路由</code> 模式，确保所有流量走代理</li>
+                <li>系统设置中禁用 IPv6，防止 IPv6 流量绕过代理</li>
+            </ul>
+        </div>
+
+        <h3>使用习惯</h3>
+        <div class="info-box warning">
+            <strong>铁律：每次用完 TikTok 必须关闭进程</strong>
+            TikTok 在后台运行时如果 VPN 断开，会瞬间暴露真实 IP，导致账号被标记。务必每次使用完毕后彻底关闭 TikTok 后台进程。
+        </div>
+    </div>
+
+    <!-- Section 5: Detection -->
+    <div class="section" id="s5">
+        <h2><span class="num">5</span> 环境检测</h2>
+
+        <div class="info-box danger">
+            <strong>核心原则：每次操作 TikTok 前必须检测环境！</strong>
+            先开 VPN，再检测，确认无误后才打开 TikTok。
+        </div>
+
+        <h3>检测工具与标准</h3>
+        <table>
+            <tr>
+                <th>检测工具</th>
+                <th>检测内容</th>
+                <th>合格标准</th>
+            </tr>
+            <tr>
+                <td><strong>whoer.net</strong></td>
+                <td>综合伪装度（IP、DNS、时区、语言等）</td>
+                <td><span class="tag green">100% 最佳</span> <span class="tag orange">≥90% 可用</span> <span class="tag red">＜80% 停止操作</span></td>
+            </tr>
+            <tr>
+                <td>ipip.net</td>
+                <td>IP 地理位置</td>
+                <td>必须与目标运营国一致</td>
+            </tr>
+            <tr>
+                <td>DNSLeakTest.com</td>
+                <td>DNS 泄漏检测</td>
+                <td>DNS 服务器必须在目标国，无国内 DNS</td>
+            </tr>
+            <tr>
+                <td>Scamalytics.com</td>
+                <td>IP 欺诈/风险评分</td>
+                <td>风险评分越低越好，建议 ＜30</td>
+            </tr>
+            <tr>
+                <td>IPQS (ipqualityscore.com)</td>
+                <td>IP 纯净度</td>
+                <td>非黑名单、非代理标记</td>
+            </tr>
+        </table>
+
+        <div class="update-block">
+            <div class="update-title">2026 更新说明</div>
+            <p>原资料只使用 whoer.net 检测，在 2026 年已不够充分。TikTok 的风控系统新增了 DNS 泄漏检测和 IP 纯净度评估，建议至少同时使用 <strong>whoer.net + DNSLeakTest</strong> 两项检测。IP 纯净度检测（Scamalytics）建议每周做一次。</p>
+        </div>
+    </div>
+
+    <!-- Section 6: Registration -->
+    <div class="section" id="s6">
+        <h2><span class="num">6</span> TikTok 注册</h2>
+
+        <h3>注册流程</h3>
+        <ol class="step-list">
+            <li>打开 TikTok，选择 <strong>Use phone or email</strong>（不要选 Google 账号登录，避免关联风险）</li>
+            <li><strong>设置生日</strong>：必须 18 岁以上，建议设置成与目标人群类似的年龄段</li>
+            <li>选择 <strong>Email 方式</strong>，输入准备好的 Gmail 邮箱</li>
+            <li><strong>设置密码</strong>：8–20 位，包含字母 + 数字 + 符号，妥善记录</li>
+            <li><strong>兴趣爱好</strong>：只选该账号对应的二级或三级类目，其他一律不选</li>
+        </ol>
+
+        <h3>资料设置</h3>
+        <table>
+            <tr>
+                <th>项目</th>
+                <th>要求</th>
+                <th>注意事项</th>
+            </tr>
+            <tr>
+                <td>昵称</td>
+                <td>按事先计划设置</td>
+                <td>确定后<strong>不要随便改</strong>，频繁修改触发风控</td>
+            </tr>
+            <tr>
+                <td>头像</td>
+                <td>AI 生成的符合名字气质的老外半身照</td>
+                <td>不用名人头像；用 Midjourney 等工具生成后，<strong>用 PS 修改图片 MD5 值</strong>再上传；后期基本不改</td>
+            </tr>
+            <tr>
+                <td>Bio 简介</td>
+                <td>模仿同类目优秀账号撰写</td>
+                <td>在能挂链接之前，先把官网地址写在 Bio 中</td>
+            </tr>
+        </table>
+
+        <div class="update-block">
+            <div class="update-title">2026 更新说明</div>
+            <ul>
+                <li><strong>新号注册后前 3 天不要修改头像、昵称、简介</strong>，先用默认状态度过初始风控期，第 3-4 天再完善资料</li>
+                <li>绑定安全邮箱或手机号，便于找回和验证</li>
+                <li>保持注册信息与资料一致，降低风控风险</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 7: Warm Up -->
+    <div class="section" id="s7">
+        <h2><span class="num">7</span> 养号阶段</h2>
+
+        <h3>起号前的准备工作</h3>
+        <ul>
+            <li>用<strong>小号</strong>调研运营类目内的 Hashtags，按一级、二级、三级分类记录</li>
+            <li>研究同类目头部账号的内容风格、发布频率、互动方式</li>
+        </ul>
+
+        <h3>养号时间线</h3>
+
+        <h4>第 1–3 天：纯浏览期</h4>
+        <ul>
+            <li><strong>不发任何视频</strong>，但要多次登录</li>
+            <li>多搜索该账号要运营的类目关键词</li>
+            <li>浏览相关视频并<strong>完整播放</strong>（完播率是核心指标）</li>
+            <li>给垂直视频点赞，留言互动</li>
+            <li>收藏垂直类目的 Hashtag（精准的优先，大型垂直的加 1-2 个即可）</li>
+        </ul>
+
+        <div class="info-box tip">
+            <strong>保持运营号的"纯洁"</strong>
+            看到无关的吸引人的视频忍住不要点！想看用小号去看。运营号的每一次互动都在训练 TikTok 的推荐算法，乱点会污染标签。
+        </div>
+
+        <h4>第 4–7 天：深度互动期 <span class="update-badge">2026 更新</span></h4>
+        <ul>
+            <li>继续完播垂直内容，每日 0.5–1.5 小时，分时段操作</li>
+            <li>每天点赞 3–5 个同领域视频，关注 1–2 个同领域账号</li>
+            <li>发布有意义的评论（不要发"好棒""求关注"等机械评论）</li>
+            <li>次日检查点赞/关注是否成功，若失败说明账号可能受限</li>
+        </ul>
+
+        <div class="update-block">
+            <div class="update-title">2026 新增："三进三出"养号法</div>
+            <p>这是近两年被验证有效的养号技巧，有助于快速建立账号活跃度：</p>
+            <ol>
+                <li>大退 TikTok App（彻底关闭后台）</li>
+                <li>开启飞行模式，等待 10 秒以上</li>
+                <li>关闭飞行模式</li>
+                <li>检测伪装度（whoer.net）</li>
+                <li>打开 TikTok</li>
+                <li>完整播放刷到的第一个视频，点赞并关注</li>
+                <li>再次大退 TikTok</li>
+            </ol>
+            <p>重复以上操作 <strong>3–5 次</strong>，每天执行。</p>
+        </div>
+
+        <h4>第 7 天后：首条视频发布</h4>
+        <ul>
+            <li>首条视频直接影响账号初始标签，必须选择领域内的优质内容</li>
+            <li>标签策略：3–5 个 Hashtag，1 个热门 + 其余垂直领域标签</li>
+            <li>发布时间匹配目标市场时区的活跃时段</li>
+        </ul>
+
+        <h3>养号成功判定标准 <span class="update-badge">2026 更新</span></h3>
+        <table>
+            <tr>
+                <th>指标</th>
+                <th>标准</th>
+                <th>判定</th>
+            </tr>
+            <tr>
+                <td>推荐页内容</td>
+                <td>60% 以上为目标领域视频</td>
+                <td><span class="tag green">标签形成</span></td>
+            </tr>
+            <tr>
+                <td>首条视频 12h 播放量</td>
+                <td>＞1000</td>
+                <td><span class="tag green">优质号，保留</span></td>
+            </tr>
+            <tr>
+                <td>首条视频 12h 播放量</td>
+                <td>200–1000</td>
+                <td><span class="tag orange">可以继续养</span></td>
+            </tr>
+            <tr>
+                <td>首条视频 12h 播放量</td>
+                <td>＜200</td>
+                <td><span class="tag red">建议弃号重来</span></td>
+            </tr>
+        </table>
+
+        <h3>养号禁忌</h3>
+        <ul class="checklist">
+            <li class="cross">除了自己公司主号，<strong>不关注任何其他账号</strong></li>
+            <li class="cross">账号矩阵中不同类目的账号<strong>不要互相关注</strong></li>
+            <li class="cross">不要在运营号上浏览非垂直内容</li>
+            <li class="cross">不要同一设备切换多个账号</li>
+            <li class="cross">不要连接公共 Wi-Fi 登录账号</li>
+            <li class="cross">不要频繁更换 IP 或时区</li>
+            <li class="cross">不要批量点赞/关注/评论</li>
+        </ul>
+
+        <div class="update-block">
+            <div class="update-title">2026 更新：养号周期延长</div>
+            <p>原资料建议 3 天内不发视频。根据 2025-2026 年的实战反馈，<strong>建议延长至 5–7 天</strong>。平台风控更加严格，充分的养号期有助于账号建立稳定的标签体系，获得更精准的初始推流。新号首周每天总操作次数（点赞+关注+评论）建议控制在 <strong>20 次以内</strong>。</p>
+        </div>
+    </div>
+
+    <!-- Section 8: 2026 Trends -->
+    <div class="section" id="s8">
+        <h2><span class="num">8</span> 2026 风控新趋势与应对 <span class="update-badge">全新章节</span></h2>
+
+        <div class="info-box danger">
+            <strong>核心变化：行为检测权重已超过 70%</strong>
+            2026 年 TikTok 风控的底层逻辑发生了根本性改变。平台不再只看"你是谁"（环境伪装），而是重点看"你怎么做"（行为模式）。通过海量真实用户数据构建的"真人行为模型"，任何带有"机器感"的操作都会被实时监控。
+        </div>
+
+        <h3>四大操作雷区</h3>
+        <table>
+            <tr>
+                <th>雷区</th>
+                <th>具体表现</th>
+                <th>后果</th>
+            </tr>
+            <tr>
+                <td>僵尸号突然启动</td>
+                <td>批量注册后长期闲置，突然高频操作</td>
+                <td>直接封号</td>
+            </tr>
+            <tr>
+                <td>批量同步操作</td>
+                <td>多个账号在固定时间点执行相同操作</td>
+                <td>矩阵号团灭</td>
+            </tr>
+            <tr>
+                <td>机械式刷互动</td>
+                <td>发送"求关注""好棒"等无意义评论</td>
+                <td>限流/封号</td>
+            </tr>
+            <tr>
+                <td>沉默后高频操作</td>
+                <td>闲置数月后一天内疯狂发帖点赞</td>
+                <td>触发风控</td>
+            </tr>
+        </table>
+
+        <h3>应对策略：让账号"像个真人"</h3>
+        <ul>
+            <li><strong>随机节奏</strong>：发帖时间不固定，偶尔断更一两天，互动有来有往</li>
+            <li><strong>模拟真人小操作</strong>：偶尔"误点赞再取消"，浏览时有快有慢</li>
+            <li><strong>渐进式活跃</strong>：从低频到高频逐步增加操作量，不要突然爆发</li>
+            <li><strong>内容去同质化</strong>：同一产品准备多套脚本（测评、场景、教程、对比等）</li>
+            <li><strong>矩阵号差异化</strong>：不同账号定位不同，运营轨迹避免高度重合</li>
+        </ul>
+
+        <h3>TikTok 9 大检测维度</h3>
+        <table>
+            <tr>
+                <th>#</th>
+                <th>检测维度</th>
+                <th>应对措施</th>
+            </tr>
+            <tr><td>1</td><td>设备信息（序列号/型号）</td><td>一机一号，封号后必须刷机</td></tr>
+            <tr><td>2</td><td>IP 地址与纯净度</td><td>独享住宅静态 IP，定期检测</td></tr>
+            <tr><td>3</td><td>系统语言/时区/定位</td><td>与 IP 地区完全一致</td></tr>
+            <tr><td>4</td><td>SIM 卡运营商信号</td><td>不插卡或插目标国卡</td></tr>
+            <tr><td>5</td><td>DNS 泄漏</td><td>开启 DNS 泄漏防护，禁用 IPv6</td></tr>
+            <tr><td>6</td><td>用户行为轨迹</td><td>模拟真人操作节奏，渐进式活跃</td></tr>
+            <tr><td>7</td><td>应用缓存数据</td><td>不安装国内 App，刷机后保持纯净</td></tr>
+            <tr><td>8</td><td>硬件参数异常</td><td>使用真机，不用模拟器</td></tr>
+            <tr><td>9</td><td>账号登录设备历史</td><td>一机一号，不跨设备登录</td></tr>
+        </table>
+    </div>
+
+    <!-- Section 9: Appeal -->
+    <div class="section" id="s9">
+        <h2><span class="num">9</span> 账号解封申诉 <span class="update-badge">全新章节</span></h2>
+
+        <h3>常见封禁原因</h3>
+        <ul>
+            <li>注册后高频操作（点赞/评论/发视频过快）</li>
+            <li>多设备、多 IP 登录同一账号</li>
+            <li>内容搬运或二次剪辑被检测</li>
+            <li>资料异常：头像/昵称/简介过于营销化</li>
+            <li>环境检测不合格（IP/DNS/时区不一致）</li>
+        </ul>
+
+        <h3>申诉方法</h3>
+        <h4>方法一：App 内申诉</h4>
+        <p>如果封禁页面显示"申诉"按钮，直接按流程操作即可。</p>
+
+        <h4>方法二：提交工单</h4>
+        <p>访问 <code>tiktok.com/legal/report/feedback</code> 按提示提交工单，需附上相关证据。</p>
+
+        <h4>方法三：发送邮件</h4>
+        <p>无法登录时，可发送邮件至以下地址：</p>
+        <ul>
+            <li><code>feedback@tiktok.com</code>（通用）</li>
+            <li><code>legal@tiktok.com</code>（法律相关）</li>
+            <li><code>business-servicessupport@tiktok.com</code>（商业账号）</li>
+        </ul>
+
+        <div class="info-box tip">
+            <strong>申诉要点</strong>
+            态度诚恳，逻辑清晰，说明账号用途和合规意愿。避免重复提交，每次申诉间隔至少 48 小时。
+        </div>
+    </div>
+
+    <!-- Section 10: Monthly Checklist -->
+    <div class="section" id="s10">
+        <h2><span class="num">10</span> 每月维护检查清单 <span class="update-badge">全新章节</span></h2>
+
+        <table>
+            <tr>
+                <th>频率</th>
+                <th>检查项目</th>
+                <th>工具/方法</th>
+            </tr>
+            <tr>
+                <td>每次操作前</td>
+                <td>伪装度检测</td>
+                <td>whoer.net（目标 100%）</td>
+            </tr>
+            <tr>
+                <td>每周</td>
+                <td>IP 纯净度检测</td>
+                <td>Scamalytics.com</td>
+            </tr>
+            <tr>
+                <td>每周</td>
+                <td>DNS 泄漏检测</td>
+                <td>DNSLeakTest.com</td>
+            </tr>
+            <tr>
+                <td>每月</td>
+                <td>检查 VPN 节点稳定性</td>
+                <td>更换不稳定节点</td>
+            </tr>
+            <tr>
+                <td>每月</td>
+                <td>清理 Safari/浏览器缓存</td>
+                <td>设置 → Safari → 清除历史与网站数据</td>
+            </tr>
+            <tr>
+                <td>每月</td>
+                <td>检查 iOS 系统更新</td>
+                <td>非必要不更新，保持稳定版本</td>
+            </tr>
+            <tr>
+                <td>持续</td>
+                <td>复盘完播率、互动数据</td>
+                <td>TikTok Analytics</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>TikTok 海外账号运营准备手册 | 基于实战验证，2026 年 4 月更新</p>
+    <p>本手册仅供学习参考，请遵守当地法律法规及平台规则</p>
+</div>
+
+<button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" id="backTop">↑</button>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var btn = document.getElementById('backTop');
+        if (window.scrollY > 400) {
+            btn.style.display = 'flex';
+        } else {
+            btn.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
